@@ -21,7 +21,7 @@ class Card {
     }
     #createCard(){
         let ob = document.createElement("div");
-        ob.setAttribute("class", "card");
+        ob.setAttribute("class", "card  swipperCol hoverscale");
         ob.style.borderRadius = "1rem";
         // console.log(this.#height);
         ob.style.width = `${this.#width}px`;

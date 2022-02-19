@@ -46,3 +46,18 @@
 .icon:hover{
   color:  #23478d;
 }
+
+.pDecrip{
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 5rem 0 5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.pDecripText{
+    margin: 0 10rem 0 10rem;
+}
+
+.live_text:hover{
+  color: #B5B5B5;
+}

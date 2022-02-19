@@ -1,9 +1,12 @@
-function fillGrid(id, n, dir, ext, links){
+function fillGrid(id, n, dir, ext, links, clas){
 	const mygrid = document.getElementById(id);
 	mygrid.style.margin = "3rem 0 3rem 0";
 	for(let i=0; i<n; i++){
 		const mainEl = document.createElement("div");
-		mainEl.setAttribute("class", "col-6 col-lg-3 col-md-4 col-sm-6 swipperCol hoverscale");
+		if(clas)
+			mainEl.setAttribute("class", `${clas} swipperCol hoverscale`);
+		else 
+			mainEl.setAttribute("class", "col-6 col-lg-3 col-md-4 col-sm-6 swipperCol hoverscale");
 
 		const aElement = document.createElement("a");
 		if(links[i])
