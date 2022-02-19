@@ -1,0 +1,220 @@
+#main-bar {
+  background-color: #142850;
+}
+
+#main-footer {
+  background-color: #142850;
+}
+
+
+.space-for-defination {
+  width: 590px;
+  align-content: center;
+}
+
+.footer_defination {
+  color: lightgrey;
+  display: none;
+}
+
+.footer-block {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-block li a {
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-block li a:hover {
+  color: black;
+  background-color: #003366;
+  transition: 0.3s;
+}
+
+
+@media (min-width: 1024px) {
+.footer_defination {
+  display:inline;
+} }
+
+.setting-for-scroll {
+  height: 35px;
+}
+
+.footer_pay_sistem {
+  margin: 20px 30px 30px;
+}
+
+.img-bord-around {
+  border-radius: 10px;
+}
+
+.icon-youtube {
+  color: red;
+}
+
+.icon-instagram {
+  color: purple;
+}
+
+.icon-youtube:hover {
+    color: darkred;
+}
+
+.icon-instagram:hover {
+    color:  #660066;
+}
+
+@media (min-width:1024px) {
+
+}
+
+#main_body {
+  border-radius: 50px 50px 0 0;
+  background-color: #f5f5f5;
+}
+
+/* ÑÑ‚Ð¸Ð»Ð¸ Ð±Ð»Ð¾ÐºÐ° Ð°ÐºÐºÐ¾Ñ€Ð´ÐµÐ¾Ð½ */
+.accordion {
+  width:100%;
+  max-width: 600px;
+  margin: 0 auto
+}
+/* ÑÐµÐºÑ†Ð¸Ð¸ Ð°ÐºÐºÐ¾Ñ€Ð´ÐµÐ¾Ð½Ð° */
+.accordion .accordion_item {
+  margin-bottom:1px;
+  position:relative
+}
+/* Ð·Ð°Ð³Ð¾Ð»Ð¾Ð²ÐºÐ¸ Ð¿Ð°Ð½ÐµÐ»ÐµÐ¹ Ð°ÐºÐºÐ¾Ñ€Ð´ÐµÐ¾Ð½Ð° */
+.accordion .title_block {
+  font-weight: 400;
+  font-size: 18px;
+  color: #eee;
+  cursor:pointer;
+  background: #009688;
+  padding:10px 55px 10px 15px;
+  -webkit-transition:all .2s linear 0;
+  -webkit-transition-delay:.2s 0;
+  transition:all .2s linear 0
+}
+/* Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡Ð°Ñ‚ÐµÐ»ÑŒ Ð¿Ð°Ð½ÐµÐ»ÐµÐ¹, Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð½Ð¸Ð· */
+.accordion .title_block:before {
+  content:'';
+  height:8px;
+  width:8px;
+  display:block;
+  border:2px solid #fefefe;
+  border-right-width:0;
+  border-top-width:0;
+  -ms-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  position:absolute;
+  right:20px;
+  top:18px
+}
+/* Ð°ÐºÑ‚Ð¸Ð²Ð½Ñ‹Ð¹ Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡Ð°Ñ‚ÐµÐ»ÑŒ, Ð¿Ð¾Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð²ÐµÑ€Ñ… */
+.accordion .active_block .title_block:before {
+  border:2px solid #fefefe;
+  border-left-width:0;
+  border-bottom-width:0;
+  top:18px
+}
+.accordion .title_block:hover {
+  background: #26A69A
+}
+
+/* Ð·Ð°Ð³Ð¾Ð»Ð¾Ð²Ð¾Ðº Ð°ÐºÑ‚Ð¸Ð²Ð½Ð¾Ð³Ð¾ Ð±Ð»Ð¾ÐºÐ°  */
+.accordion .active_block .title_block {
+  background: #26A69A;
+  color:#fefefe
+}
+/* Ð±Ð»Ð¾ÐºÐ¸ Ñ ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ð½Ð¸ÐµÐ¼ */
+.accordion .info {
+  display:none;
+  padding:10px 15px;
+  overflow: hidden;
+  background:#f7f7f7
+}
+/* Ð¿Ð°Ñ€Ð°Ð³Ñ€Ð°Ñ„ Ð²Ð½ÑƒÑ‚Ñ€Ð¸ Ð±Ð»Ð¾ÐºÐ¾Ð² Ñ ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ð½Ð¸ÐµÐ¼ */
+.accordion .info_item {
+  margin-bottom:10px
+}
+/* ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ¸ Ð²Ð½ÑƒÑ‚Ñ€Ð¸ Ð°ÐºÐºÐ¾Ñ€Ð´ÐµÐ¾Ð½Ð° */
+.accordion .info img {
+    height: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* Ð¿Ð¾Ð»Ð½Ð¾Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð°Ñ ÐºÐ°Ñ€Ñ‚Ð¸Ð½ÐºÐ° */
+.large-img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* Ð¼Ð¸Ð½Ð¸Ð°Ñ‚ÑŽÑ€Ð° ÑÐ»ÐµÐ²Ð° */
+.img-left {
+    width: 25%;
+    float:left;
+    margin:5px 15px 5px 0;
+}
+/* Ð¼Ð¸Ð½Ð¸Ð°Ñ‚ÑŽÑ€Ð° ÑÐ¿Ñ€Ð°Ð²Ð° */
+.img-right {
+    width: 25%;
+    float:right;
+    margin:5px 0 5px 15px;
+}
+
+.fab fa-facebook fa-2x {
+  border: 90px solid white;
+}
+
+/*Footer selectors begin*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #142850;
+  color: lightgrey;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid lightgrey;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.activee, .accordion:hover {
+  background-color: #003366;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+
+.accordion::after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  background-color: #142850;
+  color: white;
+  float: right;
+}
+
+.activee:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  background-color: #142850;
+  color: white;
+}
+
+
+
+/*Footer selectors end*/
