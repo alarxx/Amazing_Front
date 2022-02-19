@@ -80,6 +80,8 @@
 }
 
 #main_body {
+  border-radius: 50px 50px 0 0;
+  background-color: white;
 }
 
 /* стили блока аккордеон */
@@ -215,6 +217,99 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+
+
+.icon-mar {
+  padding: 5px;
+}
+
+.icon {
+  color: DarkBlue;
+}
+
+.location {
+  font-size: 3rem;
+}
+
+.container-fluid {
+  padding: 0 0;
+}
+
+.space-for-btn {
+  margin: 10px;
+}
+
+.details-part {
+  background-color: #FFFAF0;
+}
+
+.catalog {
+  margin: 30px;
+  padding: 15px;
+}
+
+.image-cont img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+.text-cont {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.text-cont a {
+  color: black;
+}
+
+.spec-color {
+  color: #fff;
+}
+
+.icon-star {
+  color: yellow;
+}
+
+/* for 1 part */
+
+.image-part-1 {
+  margin: 2rem 4rem;
+}
+
+.desing-name-pet-item-1 {
+  padding: 4rem 1.5rem;
+}
+
+.text-description-for-pet-1 {
+  margin: 1.5rem;
+}
+
+@media (min-width:1024px) {
+  .details-for-adp {
+    border-radius:30px 0 0 0;
+  }
+}
+
+.details-for-adp {
+  border-radius: 30px 30px 0 0;
+}
+
+/* for 2 part  */
+
+
+/* for 3 part */
+
+
+
+/* for all */
+
+.backgr-for-car {
+  background-color: #48D1CC;
+  text-align: center;
+  padding: 50px 50px 150px;;
 }
 
 
@@ -712,3 +807,20 @@ xsigin/signup popup
 #cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected {
   display: block;
 }
+
+
+/*стили для картинки внутрь карточек */
+
+.container-for-items {
+      margin: 10px;
+    }
+
+    .container-for-items img {
+      height: 400px;
+      padding:10px;
+      transition: 0.5s;
+    }
+
+    .container-for-items img:hover {
+      transform: scale(1.1);
+    }

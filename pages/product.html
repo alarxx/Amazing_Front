@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sarsenov Dauren, Akilbekov Alar, Baygozha Beybarys">
+  <meta name="description" content="modern internet-shop for every person">
+  <meta name="keywords" content="internet-shop">
+  <title>Amazing</title>
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Library -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/biba_styles.css">
+  <!-- Bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="../pic/favicon.ico">
+  <!-- ALAR -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+  <!-- DAUREN -->
+  <!-- Main navbar -->
+   <header>
+    <section class="main-bar">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0">
+
+          <div style="padding-right: 20px;">
+            <button type="button" class="btn burger-dark" onclick="openNav()"><i class="fas fa-bars fa-2x"></i></button>
+          </div>
+
+          <a class="navbar-brand ml-auto" href="../index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-shopping-bag" aria-hidden="true"></i> &nbsp;Amazing</a>
+
+
+
+          <ul class="nav ml-auto" style="margin-left:10px; text-align:center; margin-top:10px; margin-botton:0px;">
+            <li class="nav-item">
+              <a class="nav-link details-nav" href="#"><i class="fas fa-map-marker-alt fa-2x"></i>
+                <br>
+                <p>Address</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link details-nav" href="#"><i class="fas fa-shopping-basket fa-2x"></i>
+                <br>
+                <p>Basket</p>
+              </a>
+            </li>
+            <li class="nav-item block-for-signin">
+              <a class="nav-link details-nav cd-signup" href="#"><i class="fas fa-user-alt fa-2x"></i>
+                <br>
+                <p>Log In</p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+    </section>
+   </header>
+
+  <!-- DAUREN -->
+  <!-- ROUND-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+
+  <!-- DAUREN -->
+	<div class="cd-user-modal"> <!-- все формы на фоне затемнения-->
+		<div class="cd-user-modal-container"> <!-- основной контейнер -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Вход</a></li>
+				<li><a href="#0">Регистрация</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- форма входа -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Пароль</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Пароль">
+						<a href="#0" class="hide-password">Скрыть</a>
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Запомнить меня</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Войти">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Забыли свой пароль?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- форма регистрации -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Имя пользователя">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Пароль</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Пароль">
+						<a href="#0" class="hide-password">Скрыть</a>
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Создать аккаунт">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- форма восстановления пароля -->
+				<p class="cd-form-message">Забыли пароль? Пожалуйста, введите адрес своей электронной почты. Вы получите ссылку, чтобы создать новый пароль.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Восстановить пароль">
+					</p>
+				</form>
+				<p class="cd-form-bottom-message"><a href="#0">Вернуться к входу</a></p>
+			</div> <!-- cd-reset-password -->
+		  <a href="#0" class="cd-close-form">Закрыть</a>
+  	</div> <!-- cd-user-modal-container -->
+  </div> <!-- cd-user-modal -->
+
+
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+    <li><a href="../pages/books.html">Books</a></li>
+    <li><a href="../pages/electronics.html">Electronics</a></li>
+    <li><a href="../pages/pet.html">Pet itemes</a></li>
+    <li><a href="../pages/shoes.html">Shoes</a></li>
+    <li><a href="../pages/clothes.html">Clothes</a></li>
+    <li><a href="../pages/toys.html">Toys</a></li>
+    <li><a href="../pages/sport.html">Sport</a></li>
+    <li><a href="../pages/hom.html">Hom</a></li>
+    <li><a href="../pages/furniture.html">Furniture</a></li>
+    <li><a href="../pages/health.html">Health</a></li>
+    <li><a href="../pages/beauty.html">Beauty</a></li>
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+      <label class="btn btn-outline-light active">
+        <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+      </label>
+      <label class="btn btn-outline-dark">
+        <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+      </label>
+    </div>
+  </div>
+  
+
+  <section id="main-part">
+      <!-- <div class="container-fluid"> -->
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 details-for-adp" style="background-color:white; border-right:3px solid black; padding:1rem 1rem 1rem 1.5rem;">
+
+            <button class="navbar-toggler" style="width:100%; height:30px; background-color:grey;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon" style="color:green; text-align:center;">Фильтры:</span>
+            </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <form>
+                      <div class="form-group">
+                        <label for="formControlRange" style="margin-left:10px; margin-top:20px;">Pet size</label>
+                        <input type="range" class="form-control-range" min="0" max="5" step="0.5" id="formControlRange">
+                      </div>
+                    </form>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="form-check" style="margin:10px;">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                      <label class="form-check-label" for="defaultCheck1">
+                        Dog
+                      </label>
+                    </div>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="form-check" style="margin:10px;">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                      <label class="form-check-label" for="defaultCheck1">
+                        Cat
+                      </label>
+                    </div>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="form-check" style="margin:10px;">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        Hamster
+                      </label>
+                    </div>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="form-check" style="margin:10px;">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1">
+                        Another pet
+                      </label>
+                    </div>
+                  </li>
+                  <li class="nav-item active">
+                    <form>
+                      <div class="form-row" style="margin:10px;">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Min price" value="19.99 $">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Max price" value="19.99 $">
+                        </div>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="col-lg-9 col-sm-12">
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="image-part-1">
+                    <div class="container-for-items">
+                      <a href="https://m.media-amazon.com/images/I/915zr5bOhhL._AC_SL1500_.jpg" data-lightbox="daur" height="400px"><img src="https://m.media-amazon.com/images/I/915zr5bOhhL._AC_SL1500_.jpg"></a>
+                      <a href="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg" data-lightbox="daur" style="display:none;"><img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg"></a>
+                      <a href="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg" data-lightbox="daur" style="display:none;"><img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg"></a>
+                      <a href="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg" data-lightbox="daur" style="display:none;"><img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg"></a>
+                      <a href="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg" data-lightbox="daur" style="display:none;"><img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/07/23090714/nature-1024x682.jpeg"></a>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-6 col-sm-12">
+                  <div class="desing-name-pet-item-1">
+                    <h4>DOG GROOMING HAMMOCK PET DOG GROOMING HARNESS WITH CARABINER HOOKS, 12 IN 1 PET GROOMING SUPPLIES KIT WITH NAIL TRIMMER/COMB/SCISSORS, FOR BATHING/SHAVING/NAIL TRIMMING/EYE CARE</h4>
+                    <hr>
+                    <button type="button" class="btn btn-outline-warning">Price: $19.99</button><br><br>
+                    <i class="fas fa-star icon-star fa-2x"></i>
+                    <i class="fas fa-star icon-star fa-2x"></i>
+                    <i class="fas fa-star icon-star fa-2x"></i>
+                    <i class="fas fa-star icon-star fa-2x"></i>
+                    <i class="fas fa-star icon-star fa-2x"></i>
+                  </div>
+                </div>
+
+
+                <div class="text-description-for-pet-1">
+                  <hr>
+                  <p><b>Pet grooming hammock is a good helper for your cats and dogs,you will like it,so as your pets.</b><br>
+
+                    Pet grooming hammock is a good helper for your pets cats and dogs. With the dog grooming sling,you can easily complete pet grooming things even at home, such as trimming nails,cleaning eyes and ears, giving medicines or injections,
+                    checking pets body indicators, etc. It can help you accomplish these things on your own, and you don't need to worry about pets being disobedient<br>
+                    This is an upgraded cat dog grooming hammock.In order to add safety,we have added two stronger carabiner hooks , which makes the dog grooming harness easier to hang, better support ,better load-bearing ,and more stable for their
+                    safety especially from falling down.<br>
+                    The dog sling for grooming is designed with 3-layer thick Polyester mesh material with 3D air-mesh technology，which is strong/soft/breathable, and not easy to deform or break;in addtion,in order to reduce friction, we have specially
+                    thickened the edges of the front and rear legs of the hammock, all these details are increased in order to make your pets more comfortable and relaxed when using the cat dog grooming hammock.<br>
+                    Pet hammock set include 12 pieces: cat dog grooming hammock x 1；carabiner hook x 2；S-shaped hook x2；hanging sling x 2(suitable for hanging in different places)；nail clippers x 1(with safety stop guard design)；nail file x 1；steel pet
+                    comb x 1 (with rounded ends stainless steel teeth)；scissors x2 .This set is a very practical combination to meet pets' grooming needs.<br>
+                    S -Orange pet cat dog grooming hammock, length and width is 24*18inch (60*45cm), is suitable for pet whose spacing between front and rear legs is 5.1-11.8inch (13*30cm) ,max load up to 55lb(25kg).Please read the size chart and measure
+                    the spacing between the front and rear legs for your pets before purchasing. If you have another question, please connect us.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- </div> -->
+    </section>
+
+
+
+  <!-- С ним некрасиво выглядит тень -->
+  <!-- <div style="width:100%; height:50px; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:0 0 50px 50px; width:100%; height:100%;"></div>
+  </div> -->
+ 
+
+
+  <!-- BEIBARYS -->
+  <!-- footer -->
+  <footer>
+    <section id="main-footer">
+      <div class="container-fluid">
+
+        <div class="row" style="padding-top:30px;">
+          <div class="col-lg-4">
+            <button class="accordion">Покупателям</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Как сделать заказ</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Способы оплаты</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Доставка</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат товара</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат денежных средств</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила продажи</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила пользования торговой площадкой</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Вопросы и ответы</a></li>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="accordion">Партнерам</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Продавцам</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Откройте пункт выдачи</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Франшизный пункт выдачи</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="accordion">Компания</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+              <li><a rel="nofollow" href="../pages/about.html" style="color: lightgrey;">О нас</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Реквизиты</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Пресс-центр</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Контакты</a></li>
+              <li><a rel="nofollow" href="#" style="color: lightgrey;">Bug Bounty</a></li>
+            </ul>
+            </div>
+          </div>
+          <div class="col-lg-1 col-sm-1">
+
+          </div>
+        </div>
+        <br><br>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 0.05rem solid white; border-radius: 9px; padding: 0px; margin-right: 50px;"><img src="https://www.yuuju.hn/assets/img/appGallery-es.png" style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 1px solid white; border-radius: 6px; padding: 0px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 2px solid lightgrey; border-radius: 9px; padding: 0px; margin-left: 50px;"><img src="https://getstayactive.com/wp-content/uploads/2017/10/App-Store-Logo.png" style="width:150px; height:45px;"></a>
+          </li>
+        </ul>
+        <br>
+
+        <div class="under-fav">
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-vk fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-youtube fa-2x icon-youtube"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-instagram fa-2x icon-instagram"></i></a>
+          </li>
+
+        </ul>
+
+        <div class="nav justify-content-center">
+
+          <span class="footer_defination">2021-2022 © Amazing</span>
+          <span class="footer_defination" style="padding-left: 5px;"> - современный интернет-магазин для тех кто ищит аксессуары для животных, книги, </span>
+          <span class="footer_defination">электроники и многие другие интересные товары. Все права защищены. Доставка по всему Казахстану!</span>
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-visa fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-mastercard fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/VzuwBDTtj6qCoJWIxikZAJ8Y5I1YGdlxzWhUo3-Xe51J7p_vD-RYtmpb0ffmh64iWeg" alt="kaspi" style="width:30px;">
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/AcTuzpsadAJTixBYyIpMvr8IbSX_hwZkX1el4WldG9L6hncSa2sBhehqnJBwITZHF2Bi" alt="halyk" style="width:30px;">
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </footer>
+
+
+  <!-- DAUREN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../scripts/index.js" charset="utf-8"></script>
+  <!-- BEIBARYS -->
+  <script src="../scripts/biba.js" charset="utf-8"></script>
+
+  <!-- ALAR -->
+  <script src="../assets/scripts/click.js"></script>
+  <script>setClickListener("../assets/sounds/click.mp3")</script>
+
+  <!-- <script src="../assets/scripts/adapcarousel.js"></script>
+  <script src="../assets/scripts/caro.js"></script>
+  <script src="../assets/scripts/grido.js"></script> -->
+</body>
+
+</html>
