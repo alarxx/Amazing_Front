@@ -76,8 +76,7 @@ class CaroHolder{
 
 			this.#items[i] = new Item(i==0);
 			this.#items[i].setImgDir(isBig ? this.#imgsBig[i] : this.#imgsSmall[i]);
-			if(this.#links[i]) 
-      			this.#items[i].element.addEventListener("click", () => {window.location.href = this.#links[i]});
+			// if(this.#links[i]) this.#items[i].element.addEventListener("click", () => {window.location.href = this.#links[i]});
 
 			this.#caro.appendChild(this.#items[i].element);
 		}
