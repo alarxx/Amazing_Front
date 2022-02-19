@@ -3,9 +3,9 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
 function randomColor(){
 	let a = rand(0, 3);
 	if(a == 0)
-		a = "red";
+		a = "#B5B5B5";
 	else if(a == 1)
-		a = "blue";
+		a = "#B5B5B5";
 	else
 		a = "yellow";
 	return a;
