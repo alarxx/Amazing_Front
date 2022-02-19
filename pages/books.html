@@ -23,12 +23,13 @@
   <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
   <!-- Favicon -->
   <link rel="icon" href="../pic/favicon.ico">
+  
   <!-- ALAR -->
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
-
+  <!-- DAUREN -->
   <!-- Main navbar -->
    <header>
     <section class="main-bar">
@@ -70,13 +71,14 @@
     </section>
    </header>
 
+
+  <!-- DAUREN -->
   <!-- ROUND-BODY -->
   <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
-    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;">
-
-    </div>
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
   </div>
 
+  <!-- DAUREN -->
 	<div class="cd-user-modal"> <!-- все формы на фоне затемнения-->
 		<div class="cd-user-modal-container"> <!-- основной контейнер -->
 			<ul class="cd-switcher">
@@ -168,34 +170,34 @@
 		</div> <!-- cd-user-modal-container -->
 	</div> <!-- cd-user-modal -->
 
+  <!-- DAUREN -->
   <div id="mySidenav" class="sidenav">
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Search.." title="Type in a category">
-<ul id="myMenu">
-<li><a href="./pages/books.html">Books</a></li>
-<li><a href="./pages/electronics.html">Electronics</a></li>
-<li><a href="./pages/pet.html">Pet itemes</a></li>
-<li><a href="./pages/shoes.html">Shoes</a></li>
-<li><a href="./pages/clothes.html">Clothes</a></li>
-<li><a href="./pages/toys.html">Toys</a></li>
-<li><a href="./pages/sport.html">Sport</a></li>
-<li><a href="./pages/hom.html">Hom</a></li>
-<li><a href="./pages/furniture.html">Furniture</a></li>
-<li><a href="./pages/health.html">Health</a></li>
-<li><a href="./pages/beauty.html">Beauty</a></li>
-</ul>
-<div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
-<label class="btn btn-outline-light active">
-  <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
-</label>
-<label class="btn btn-outline-dark">
-  <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
-</label>
-</div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+    <li><a href="./pages/books.html">Books</a></li>
+    <li><a href="./pages/electronics.html">Electronics</a></li>
+    <li><a href="./pages/pet.html">Pet itemes</a></li>
+    <li><a href="./pages/shoes.html">Shoes</a></li>
+    <li><a href="./pages/clothes.html">Clothes</a></li>
+    <li><a href="./pages/toys.html">Toys</a></li>
+    <li><a href="./pages/sport.html">Sport</a></li>
+    <li><a href="./pages/hom.html">Hom</a></li>
+    <li><a href="./pages/furniture.html">Furniture</a></li>
+    <li><a href="./pages/health.html">Health</a></li>
+    <li><a href="./pages/beauty.html">Beauty</a></li>
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+    <label class="btn btn-outline-light active">
+      <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+    </label>
+    <label class="btn btn-outline-dark">
+      <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+    </label>
+    </div>
+  </div>
+  
 
-
-
-</div>
   <!-- body -->
   <!-- ALAR -->
   <main>
@@ -347,7 +349,6 @@
   <!-- ALAR -->
     <script src="../assets/scripts/click.js"></script>
     <script>setClickListener("../assets/sounds/click.mp3")</script>
-
     <script src="../assets/scripts/adapcarousel.js"></script>
     <script src="../assets/scripts/caro.js"></script>
     <script src="../assets/scripts/grido.js"></script>
@@ -357,13 +358,7 @@
        ["../assets/img/booksCaro/m1.jpg", "../assets/img/booksCaro/m2.jpg", "../assets/img/booksCaro/m3.jpg"],
        []);
 
-
-
-
       fillGrid("presents", 4, "../assets/img/books", "jpg", []);
-
-
-
 
       const contentHolder = new ContentHolder();
       contentHolder.addContent("../assets/img/items/books/1.png", "Гордость и пред...", "11.50$");
@@ -371,7 +366,6 @@
       contentHolder.addContent("../assets/img/items/books/3.png", "Дж. Оруэлл 1984", "3.99$");
       contentHolder.addContent("../assets/img/items/books/4.png", "Преступление и нак...", "9.90$");
       contentHolder.addContent("../assets/img/items/books/5.png", "Убить пересмеш...", "5.90$");
-
 
       const carousel = new AdaptiveCarousel(contentHolder);
 
@@ -381,7 +375,7 @@
       const contentHolder2 = new ContentHolder();
       contentHolder2.addContent("../assets/img/items/booksPar/1.png", "Скорочтение", "1.50$");
       contentHolder2.addContent("../assets/img/items/booksPar/2.png",  "Умница говорим", "2.99$");
-      contentHolder2.addContent("../assets/img/items/booksPar/3.png", "Игралочка математика", "3.99$");
+      contentHolder2.addContent("../assets/img/items/booksPar/3.png", "Игралочка матем", "3.99$");
       contentHolder2.addContent("../assets/img/items/booksPar/4.png", "Развиваем зрение", "3.90$");
       contentHolder2.addContent("../assets/img/items/booksPar/5.png", "Гравити фолз", "5.90$");
 
@@ -390,6 +384,7 @@
 
       const cont2 = document.getElementById("karlsson2");
       cont2.appendChild(carousel2.element);
+
     </script>
 </body>
 
