@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Library -->
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <!-- Bootstrap scripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -22,9 +22,9 @@
   <!-- Font Awesome script -->
   <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
   <!-- Favicon -->
-  <link rel="icon" href="pic/favicon.ico">
+  <link rel="icon" href="../pic/favicon.ico">
   <!-- ALAR -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
             <button type="button" class="btn burger-dark" onclick="openNav()"><i class="fas fa-bars fa-2x"></i></button>
           </div>
 
-          <a class="navbar-brand ml-auto" href="index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-book" aria-hidden="true"></i> Amazing</a>
+          <a class="navbar-brand ml-auto" href="../index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-book" aria-hidden="true"></i> Amazing</a>
 
 
 
@@ -183,7 +183,6 @@
 <li><a href="./pages/furniture.html">Furniture</a></li>
 <li><a href="./pages/health.html">Health</a></li>
 <li><a href="./pages/beauty.html">Beauty</a></li>
-<li><a href="./pages/about.html">About Us</a></li>
 </ul>
 <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
 <label class="btn btn-outline-light active">
@@ -201,6 +200,7 @@
   <!-- ALAR -->
   <main>
     <section id="main_body">
+
     <!-- CAROUSEL -->
     <div class="container-fluid myCarousel">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -233,8 +233,11 @@
   </main>
 
   <!-- LIST -->
-    <div id="karlsson" style="margin: 5rem 0rem 0rem 0rem;">
-      <h1 style="text-align: center; margin-bottom: 2rem;">Хиты продаж</h1>
+    <div id="karlsson1" style="margin: 7rem 0rem 0rem 0rem;">
+      <h1 style="text-align: center; margin-bottom: 2rem;">Художественная литература</h1>
+    </div>
+    <div id="karlsson2" style="margin: 5rem 0rem 5rem 0rem;">
+      <h1 style="text-align: center; margin-bottom: 2rem;">Детям и родителям</h1>
     </div>
 
 
@@ -339,15 +342,55 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./scripts/index.js" charset="utf-8"></script>
+  <script src="../scripts/index.js" charset="utf-8"></script>
 
   <!-- ALAR -->
-    <script src="./assets/scripts/click.js"></script>
-    <script>setClickListener("./assets/sounds/click.mp3")</script>
-    <script src="./assets/scripts/adapcarousel.js"></script>
-    <script src="./assets/scripts/caro.js"></script>
-    <script src="./assets/scripts/grido.js"></script>
-    <script src="./assets/scripts/main.js"></script>
+    <script src="../assets/scripts/click.js"></script>
+    <script>setClickListener("../assets/sounds/click.mp3")</script>
+
+    <script src="../assets/scripts/adapcarousel.js"></script>
+    <script src="../assets/scripts/caro.js"></script>
+    <script src="../assets/scripts/grido.js"></script>
+    <script>
+      const caroHolder = new CaroHolder("mycaro", "mycaroInd",
+       ["../assets/img/booksCaro/1.jpg", "../assets/img/booksCaro/2.jpg", "../assets/img/booksCaro/3.jpg"],
+       ["../assets/img/booksCaro/m1.jpg", "../assets/img/booksCaro/m2.jpg", "../assets/img/booksCaro/m3.jpg"],
+       []);
+
+
+
+
+      fillGrid("presents", 4, "../assets/img/books", "jpg", []);
+
+
+
+
+      const contentHolder = new ContentHolder();
+      contentHolder.addContent("../assets/img/items/books/1.png", "Гордость и пред...", "11.50$");
+      contentHolder.addContent("../assets/img/items/books/2.png",  "Мастер и Марг...", "2.99$");
+      contentHolder.addContent("../assets/img/items/books/3.png", "Дж. Оруэлл 1984", "3.99$");
+      contentHolder.addContent("../assets/img/items/books/4.png", "Преступление и нак...", "9.90$");
+      contentHolder.addContent("../assets/img/items/books/5.png", "Убить пересмеш...", "5.90$");
+
+
+      const carousel = new AdaptiveCarousel(contentHolder);
+
+      const cont = document.getElementById("karlsson1");
+      cont.appendChild(carousel.element);
+
+      const contentHolder2 = new ContentHolder();
+      contentHolder2.addContent("../assets/img/items/booksPar/1.png", "Скорочтение", "1.50$");
+      contentHolder2.addContent("../assets/img/items/booksPar/2.png",  "Умница говорим", "2.99$");
+      contentHolder2.addContent("../assets/img/items/booksPar/3.png", "Игралочка математика", "3.99$");
+      contentHolder2.addContent("../assets/img/items/booksPar/4.png", "Развиваем зрение", "3.90$");
+      contentHolder2.addContent("../assets/img/items/booksPar/5.png", "Гравити фолз", "5.90$");
+
+
+      const carousel2 = new AdaptiveCarousel(contentHolder2);
+
+      const cont2 = document.getElementById("karlsson2");
+      cont2.appendChild(carousel2.element);
+    </script>
 </body>
 
 </html>

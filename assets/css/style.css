@@ -1,0 +1,48 @@
+.myCarousel{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.roundedImg{
+  border-radius: 5rem;
+
+}
+
+
+.swipperCol{
+  border-radius: 10%;
+  padding: 7px;
+}
+
+.swipperImg{
+  border-radius: 10%;
+}
+
+.hoverscale {
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.hoverscale img {
+  transition: 1s; /* Время эффекта */
+}
+.hoverscale img:hover {
+  transform: scale(1.1); /* Увеличиваем масштаб */
+}
+
+/*Features*/
+#features{
+  padding: 3% 10%;
+  text-align: center;
+}
+
+.feature-box{
+  padding: 5%;
+}
+
+.icon{
+  margin-bottom: 10%;
+  color: #142850;
+}
+
+.icon:hover{
+  color:  #23478d;
+}
