@@ -2,7 +2,8 @@
 	/* Set the width of the side navigation to 250px */
 	function openNav() {
 		// ALAR-ADD
-		document.getElementById("caroPrevBtn")?.remove();
+		btnPrevElement = document.getElementById("caroPrevBtn");
+		btnPrevElement?.remove();
 	  document.getElementById("mySidenav").style.width = "250px";
 	}
 
