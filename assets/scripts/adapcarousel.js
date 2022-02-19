@@ -37,7 +37,7 @@ class Card {
         this.#img.setAttribute("alt", "image");
         this.#img.setAttribute("width", `${this.#width}`);
         this.#img.style.borderRadius = "1rem";
-        // this.#img.setAttribute("height", `${this.#width}`);
+        this.#img.setAttribute("height", `${this.#width}`);
 
 
         // this.setImgDir("./assets/img/sleepy.jpg");
