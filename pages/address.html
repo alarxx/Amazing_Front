@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Sarsenov Dauren, Akilbekov Alar, Baygozha Beybarys">
+    <meta name="description" content="modern internet-shop for every person">
+    <meta name="keywords" content="internet-shop">
+    <title>Amazing</title>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Library -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/biba_styles.css">
+    <!-- Bootstrap scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="../pic/favicon.ico">
+    <!-- ALAR -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+      .panel {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s ease-out;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <!-- Main navbar -->
+     <header>
+      <section class="main-bar">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0">
+
+            <div style="margin: 2rem;">
+              <button type="button" class="btn burger-dark" onclick="openNav()"><i class="fas fa-bars fa-2x"></i></button>
+            </div>
+
+            <a class="navbar-brand ml-auto" href="../index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-shopping-bag" aria-hidden="true" ></i> &nbsp;Amazing</a>
+
+            <ul class="nav ml-auto" style="margin-left:10px; text-align:center; margin-top:10px; margin-botton:0px;">
+              <li class="nav-item">
+                <a class="nav-link details-nav" href="../pages/address.html"><i class="fas fa-map-marker-alt fa-2x"></i>
+                  <br>
+                  <p>Адрес</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link details-nav" href="#"><i class="fas fa-shopping-basket fa-2x"></i>
+                  <br>
+                  <p>Корзина</p>
+                </a>
+              </li>
+              <li class="nav-item block-for-signin">
+                <a class="nav-link details-nav cd-signup" href="#"><i class="fas fa-user-alt fa-2x"></i>
+                  <br>
+                  <p>Вход</p>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+
+      </section>
+     </header>
+
+     <!-- ROUND-BODY -->
+     <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+       <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+     </div>
+
+     <div class="cd-user-modal"> <!-- все формы на фоне затемнения-->
+   		<div class="cd-user-modal-container"> <!-- основной контейнер -->
+   			<ul class="cd-switcher">
+   				<li><a href="#0">Вход</a></li>
+   				<li><a href="#0">Регистрация</a></li>
+   			</ul>
+
+   			<div id="cd-login"> <!-- форма входа -->
+   				<form class="cd-form">
+   					<p class="fieldset">
+   						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+   						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+   						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+   					</p>
+
+   					<p class="fieldset">
+   						<label class="image-replace cd-password" for="signin-password">Пароль</label>
+   						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Пароль">
+   						<a href="#0" class="hide-password">Скрыть</a>
+   						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+   					</p>
+
+   					<p class="fieldset">
+   						<input type="checkbox" id="remember-me" checked>
+   						<label for="remember-me">Запомнить меня</label>
+   					</p>
+
+   					<p class="fieldset">
+   						<input class="full-width" type="submit" value="Войти">
+   					</p>
+   				</form>
+
+   				<p class="cd-form-bottom-message"><a href="#0">Забыли свой пароль?</a></p>
+   				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+   			</div> <!-- cd-login -->
+
+   			<div id="cd-signup"> <!-- форма регистрации -->
+   				<form class="cd-form">
+   					<p class="fieldset">
+   						<label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
+   						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Имя пользователя">
+   						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+   					</p>
+
+   					<p class="fieldset">
+   						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+   						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+   						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+   					</p>
+
+   					<p class="fieldset">
+   						<label class="image-replace cd-password" for="signup-password">Пароль</label>
+   						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Пароль">
+   						<a href="#0" class="hide-password">Скрыть</a>
+   						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+   					</p>
+
+   					<p class="fieldset">
+   						<input type="checkbox" id="accept-terms">
+   						<label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+   					</p>
+
+   					<p class="fieldset">
+   						<input class="full-width has-padding" type="submit" value="Создать аккаунт">
+   					</p>
+   				</form>
+
+   				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+   			</div> <!-- cd-signup -->
+
+   			<div id="cd-reset-password"> <!-- форма восстановления пароля -->
+   				<p class="cd-form-message">Забыли пароль? Пожалуйста, введите адрес своей электронной почты. Вы получите ссылку, чтобы создать новый пароль.</p>
+
+   				<form class="cd-form">
+   					<p class="fieldset">
+   						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+   						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+   						<span class="cd-error-message">Здесь сообщение об ошибке!</span>
+   					</p>
+
+   					<p class="fieldset">
+   						<input class="full-width has-padding" type="submit" value="Восстановить пароль">
+   					</p>
+   				</form>
+
+   				<p class="cd-form-bottom-message"><a href="#0">Вернуться к входу</a></p>
+   			</div> <!-- cd-reset-password -->
+   			<a href="#0" class="cd-close-form">Закрыть</a>
+     		</div> <!-- cd-user-modal-container -->
+     	</div> <!-- cd-user-modal -->
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
+        <ul id="myMenu">
+        <li><a href="../pages/books.html">Книги</a></li>
+        <li><a href="../pages/electronics.html">Электроника</a></li>
+        <li><a href="../pages/pet.html">Зоотовары</a></li>
+        <li><a href="../pages/shoes.html">Обувь</a></li>
+        <li><a href="../pages/clothes.html">Одежда</a></li>
+        <li><a href="../pages/toys.html">Игрушки</a></li>
+        <li><a href="../pages/sport.html">Спорт</a></li>
+        <li><a href="../pages/hom.html">Дом</a></li>
+        <li><a href="../pages/furniture.html">Мебель</a></li>
+        <li><a href="../pages/health.html">Здоровье</a></li>
+        <li><a href="../pages/beauty.html">Красота</a></li>
+        </ul>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+        <label class="btn btn-outline-light active">
+          <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+        </label>
+        <label class="btn btn-outline-dark">
+          <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+        </label>
+      </div>
+    </div>
+
+<!-- main body -->
+<main>
+  <!-- address container -->
+  <div class="container-address address-resp">
+        <h1 style="font-size: 400%; text-align: center;">Адрес</h1>
+  <form action="action_page.php">
+    <form class="form-inline" action="/action-page.php">
+      <div class="row">
+      <div class="col-lg-6">
+        <label for="fname">Имя</label>
+        <input type="text" id="fname" name="firstname" placeholder="Ваше имя..">
+      </div>
+      <div class="col-lg-6">
+        <label for="lname">Фамилия</label>
+        <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия..">
+        </div>
+      </div>
+    </form>
+    <label for="region">Область</label>
+    <select id="region" name="region">
+      <option value="Astana">Нур-Султан (Астана)</option>
+      <option value="Almaty">Алматы</option>
+      <option value="Akmola">Акмолинская область</option>
+      <option value="Aktobe">Актюбинская область</option>
+      <option value="Almaty-r">Алматинская область</option>
+      <option value="Atyrau">Атырауская область</option>
+      <option value="WKR">Западно-Казахстанская область</option>
+      <option value="Zhambyl">Жамбылская область</option>
+      <option value="Qaragandy">Карагандинская область</option>
+      <option value="Qostanay">Костанайская область</option>
+      <option value="Qyzylorda">Кызылординская область</option>
+      <option value="MANGYSTAU">Мангистауская область</option>
+      <option value="SKR">Южно-Казахстанская область</option>
+      <option value="NKR">Северно-Казахстанская область</option>
+      <option value="EKR">Восточно-Казахстанская область</option>
+    </select>
+    <label for="city">Город</label>
+    <input type="text" id="city" name="city" placeholder="Ваш город..">
+    <div class="row">
+      <div class="col-lg-6">
+        <label for="street">Улица</label>
+        <input type="text" id="street" name="street" placeholder="Ваша улица..">
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <label for="house">Дом</label>
+        <input type="text" id="house" name="house" placeholder="Ваш дом..">
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <label for="flat">Квартира</label>
+        <input type="text" id="flat" name="flat" placeholder="Ваша квартира..">
+      </div>
+    </div>
+
+    <label for="Add-info">Дополнительная информация про адрес</label>
+    <textarea id="Add-info" name="Add-info" placeholder="Мой адрес находится..." style="height:200px"></textarea>
+
+    <input type="submit" value="Отправить">
+  </form>
+</div>
+
+<!-- ROUND--END-BODY -->
+<div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+<div style="background-color:white; border-radius: 0 0 50px 50px; width:100%; height:100%;"></div>
+</div>
+
+
+<!-- BEIBARYS -->
+<!-- footer -->
+
+<footer>
+<section id="main-footer">
+  <div class="container">
+
+    <div class="row" style="padding-top:2.5rem;">
+      <div class="col-lg-4">
+        <button class="accordion">Покупателям</button>
+        <div class="panel" style="background-color: #142850;">
+          <ul class="footer-block">
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Как сделать заказ</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Способы оплаты</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Доставка</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат товара</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат денежных средств</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила продажи</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила пользования торговой площадкой</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Вопросы и ответы</a></li>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <button class="accordion">Партнерам</button>
+        <div class="panel" style="background-color: #142850;">
+          <ul class="footer-block">
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Продавцам</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Откройте пункт выдачи</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Франшизный пункт выдачи</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4" style="margin-right: 0; padding-right: 0;">
+        <button class="accordion">Компания</button>
+        <div class="panel" style="background-color: #142850;">
+          <ul class="footer-block">
+          <li><a rel="nofollow" href="../pages/about.html" style="color: lightgrey;">О нас</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Реквизиты</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Пресс-центр</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Контакты</a></li>
+          <li><a rel="nofollow" href="#" style="color: lightgrey;">Bug Bounty</a></li>
+        </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="border: 0.05rem solid white; border-radius: 9px; padding: 0px; margin-right: 50px;"><img src="https://www.yuuju.hn/assets/img/appGallery-es.png" style="width:150px;"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="border: 1px solid white; border-radius: 6px; padding: 0px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" style="width:150px;"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="border: 2px solid lightgrey; border-radius: 9px; padding: 0px; margin-left: 50px;"><img src="https://getstayactive.com/wp-content/uploads/2017/10/App-Store-Logo.png" style="width:150px; height:45px;"></a>
+      </li>
+    </ul>
+    <br>
+
+    <div class="under-fav">
+
+    </div>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-vk fa-2x"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-youtube fa-2x icon-youtube"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-instagram fa-2x icon-instagram"></i></a>
+      </li>
+
+    </ul>
+
+    <div class="nav justify-content-center">
+
+      <span class="footer_defination">2021-2022 © Amazing</span>
+      <span class="footer_defination" style="padding-left: 5px;"> - современный интернет-магазин для тех кто ищет аксессуары для животных, книги, </span>
+      <span class="footer_defination">электроники и многие другие интересные товары. Все права защищены. Доставка по всему Казахстану!</span>
+
+    </div>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item footer_pay_sistem" style="color: white">
+        <i class="fab fa-cc-visa fa-2x"></i>
+      </li>
+      <li class="nav-item footer_pay_sistem" style="color: white">
+        <i class="fab fa-cc-mastercard fa-2x"></i>
+      </li>
+      <li class="nav-item footer_pay_sistem">
+        <img class="img-bord-around" src="https://play-lh.googleusercontent.com/VzuwBDTtj6qCoJWIxikZAJ8Y5I1YGdlxzWhUo3-Xe51J7p_vD-RYtmpb0ffmh64iWeg" alt="kaspi" style="width:30px;">
+      </li>
+      <li class="nav-item footer_pay_sistem">
+        <img class="img-bord-around" src="https://play-lh.googleusercontent.com/AcTuzpsadAJTixBYyIpMvr8IbSX_hwZkX1el4WldG9L6hncSa2sBhehqnJBwITZHF2Bi" alt="halyk" style="width:30px;">
+      </li>
+    </ul>
+  </div>
+</section>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<!-- DAUREN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../scripts/index.js" charset="utf-8"></script>
+<!-- BEIBARYS -->
+<script src="../scripts/biba.js" charset="utf-8"></script>
+<!-- ALAR -->
+<script src="../assets/scripts/click.js"></script>
+<script>setClickListener("../assets/sounds/click.mp3")</script>
+
+  </body>
+</html>

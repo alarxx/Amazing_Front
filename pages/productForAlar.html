@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sarsenov Dauren, Akilbekov Alar, Baygozha Beybarys">
+  <meta name="description" content="modern internet-shop for every person">
+  <meta name="keywords" content="internet-shop">
+  <title>Amazing</title>
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Library -->
+  <link rel="stylesheet" href="../dist/css/lightbox.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/biba_styles.css">
+  <!-- Bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="../pic/favicon.ico">
+  <!-- ALAR -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .panel {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s ease-out;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- DAUREN -->
+  <!-- Main navbar -->
+  <header>
+    <section class="main-bar">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0">
+
+          <div style="margin: 2rem;">
+            <button type="button" class="btn burger-dark" onclick="openNav()"><i class="fas fa-bars fa-2x"></i></button>
+          </div>
+
+          <a class="navbar-brand ml-auto" href="../index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-shopping-bag" aria-hidden="true"></i> &nbsp;Amazing</a>
+
+
+
+          <ul class="nav ml-auto" style="margin-left:10px; text-align:center; margin-top:10px; margin-botton:0px;">
+            <li class="nav-item">
+              <a class="nav-link details-nav" href="../pages/address.html"><i class="fas fa-map-marker-alt fa-2x"></i>
+                <br>
+                <p>Адрес</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link details-nav" href="#"><i class="fas fa-shopping-basket fa-2x"></i>
+                <br>
+                <p>Корзина</p>
+              </a>
+            </li>
+            <li class="nav-item block-for-signin">
+              <a class="nav-link details-nav cd-signup" href="#"><i class="fas fa-user-alt fa-2x"></i>
+                <br>
+                <p>Вход</p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+    </section>
+  </header>
+
+  <!-- DAUREN -->
+  <!-- ROUND-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+
+  <!-- DAUREN -->
+  <div class="cd-user-modal">
+    <!-- все формы на фоне затемнения-->
+    <div class="cd-user-modal-container">
+      <!-- основной контейнер -->
+      <ul class="cd-switcher">
+        <li><a href="#0">Вход</a></li>
+        <li><a href="#0">Регистрация</a></li>
+      </ul>
+
+      <div id="cd-login">
+        <!-- форма входа -->
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="signin-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-password" for="signin-password">Пароль</label>
+            <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Пароль">
+            <a href="#0" class="hide-password">Скрыть</a>
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <input type="checkbox" id="remember-me" checked>
+            <label for="remember-me">Запомнить меня</label>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width" type="submit" value="Войти">
+          </p>
+        </form>
+
+        <p class="cd-form-bottom-message"><a href="#0">Забыли свой пароль?</a></p>
+        <!-- <a href="#0" class="cd-close-form">Close</a> -->
+      </div> <!-- cd-login -->
+
+      <div id="cd-signup">
+        <!-- форма регистрации -->
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
+            <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Имя пользователя">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="signup-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-password" for="signup-password">Пароль</label>
+            <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Пароль">
+            <a href="#0" class="hide-password">Скрыть</a>
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <input type="checkbox" id="accept-terms">
+            <label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width has-padding" type="submit" value="Создать аккаунт">
+          </p>
+        </form>
+
+        <!-- <a href="#0" class="cd-close-form">Close</a> -->
+      </div> <!-- cd-signup -->
+
+      <div id="cd-reset-password">
+        <!-- форма восстановления пароля -->
+        <p class="cd-form-message">Забыли пароль? Пожалуйста, введите адрес своей электронной почты. Вы получите ссылку, чтобы создать новый пароль.</p>
+
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="reset-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width has-padding" type="submit" value="Восстановить пароль">
+          </p>
+        </form>
+        <p class="cd-form-bottom-message"><a href="#0">Вернуться к входу</a></p>
+      </div> <!-- cd-reset-password -->
+      <a href="#0" class="cd-close-form">Закрыть</a>
+    </div> <!-- cd-user-modal-container -->
+  </div> <!-- cd-user-modal -->
+
+
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="../pages/books.html">Книги</a></li>
+      <li><a href="../pages/electronics.html">Электроника</a></li>
+      <li><a href="../pages/pet.html">Зоотовары</a></li>
+      <li><a href="../pages/shoes.html">Обувь</a></li>
+      <li><a href="../pages/clothes.html">Одежда</a></li>
+      <li><a href="../pages/toys.html">Игрушки</a></li>
+      <li><a href="../pages/sport.html">Спорт</a></li>
+      <li><a href="../pages/hom.html">Дом</a></li>
+      <li><a href="../pages/furniture.html">Мебель</a></li>
+      <li><a href="../pages/health.html">Здоровье</a></li>
+      <li><a href="../pages/beauty.html">Красота</a></li>
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+      <label class="btn btn-outline-light active">
+        <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+      </label>
+      <label class="btn btn-outline-dark">
+        <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+      </label>
+    </div>
+  </div>
+
+
+  <section id="main-part">
+    <!-- <div class="container-fluid"> -->
+    <div class="row">
+      <div class="col-lg-5 col-sm-12 col-md-7">
+        <div class="image-part-1">
+
+          <div class="row-for-img-product">
+            <div class="column-for-img-product">
+              <img src="../assets/img/items/booksPar/5.png" width="50px" alt="Nature" onclick="chooseImgForProduct(this);">
+            </div>
+            <div class="column-for-img-product">
+              <img src="https://cdn.f.kz/prod/781/780594_550.jpg" width="50px" alt="Snow" onclick="chooseImgForProduct(this);">
+            </div>
+            <div class="column-for-img-product" style="padding-top:1.5rem;">
+              <img src="https://images.by.prom.st/260139433_w640_h640_kniga-graviti-folz.jpg" width="50px" alt="Mountains" onclick="chooseImgForProduct(this);">
+            </div>
+            <div class="column-for-img-product" style="padding-top:1.5rem;">
+              <img src="https://images.eksmo.ru/images/gravity-2-02.2017-b-min.jpg" width="50px" alt="Lights" onclick="chooseImgForProduct(this);">
+            </div>
+          </div>
+
+          <!-- The expanding image container -->
+          <div class="container-for-img-product">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="close-btn-for-product">&times;</span>
+            <div id="main-img-for-product">
+              <img src="../assets/img/items/booksPar/5.png" width="380px">
+            </div>
+            <!-- Expanded image -->
+            <img id="expandedImg-for-product" style="width:100%; border-radius:5px;">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-7 col-sm-12 col-md-5">
+        <div class="desing-name-pet-item-1 margin-for-title" style="padding-left:5rem">
+          <h2>Гравити Фолз Дневник 3</h2>
+          <h3>Сезон : 1</h3>
+          <h3>Серия : 2</h3>
+          <h3>IDO:#12345</h3>
+
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 col-sm-6">
+          <button type="button" class="btn btn-outline-warning">Price: $5.90</button><br><br>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="far fa-star icon-star fa-2x"></i>
+        </div>
+        <div class="col-lg-12 col-sm-6">
+          <img src="https://images.wbstatic.net/brands/small/new/14481.jpg" alt="kazpost" width="200px;" style="padding-top:2rem;">
+        </div>
+      </div>
+    </div>
+      </div>
+
+
+      <div class="text-description-for-pet-1">
+        <hr>
+        <h1>Описание</h1>
+        <p>Один из самых популярных подростковых проектов на основе культового мультсериала "Гравити Фолз"! Это тот самый дневник, который фигурирует в сериале и является ключевым для сюжета. Теперь читатель может получить его в собственные руки и изучить от корки до корки!В книге также можно найти энциклопедию таинственных существ, которые обитают в Гравити Фолз, описание локаций, секретные сведения, как противостоять мистическим обитателям Гравити Фолз, сведения об обитателях других измерений, и даже схему устройства, помогающего путешествовать во времени. А кроме всего выше перечисленного, из "Дневника-3" можно узнать историю приключений брата дяди Стэна, знаменитого путешественника во времени и измерениях, который и является автором Дневника!"Дневник-3" - это уникальное издание, которое оценят не только все фанаты анимационного сериала, но и те, кто любит тайны и верит, что этот мир полон загадок.</p>
+      </div>
+    </div>
+    <div id="karlsson1" style="margin: 4rem 0rem 0rem 0rem;">
+      <h1 style="text-align: center; margin-bottom: 2rem;">Рекомендации</h1>
+    </div>
+
+    <div class="space-for-rating">
+    <span class="heading-for-rating">User Rating</span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star" style="font-size: 25px;"></span>
+    <p>4.1 average based on 254 reviews.</p>
+    <hr style="border:3px solid #f1f1f1">
+
+    <div class="row-for-rating">
+      <div class="side-for-rating">
+        <div>5 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-5-for-rating"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>150</div>
+      </div>
+      <div class="side-for-rating">
+        <div>4 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-4-for-rating"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>63</div>
+      </div>
+      <div class="side-for-rating">
+        <div>3 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-3-for-rating"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>15</div>
+      </div>
+      <div class="side-for-rating">
+        <div>2 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-2-for-rating"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>6</div>
+      </div>
+      <div class="side-for-rating">
+        <div>1 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-1-for-rating"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>20</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="text-description-for-pet-1">
+      <div class="row">
+        <h1>Комментарии</h1>
+      <div class="loader-for-product"></div>
+    </div>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 col-sm-1">
+
+  </div>
+<div class="col-lg-8 col-sm-10" style="margin-bottom:2rem;">
+    <div class="container-for-product">
+  <img src="https://i.pinimg.com/550x/f1/80/00/f18000e15398dce6b169bef14ebf0da3.jpg" alt="Avatar">
+  <p>Всем приветики! Лично для сама предлогаю эту книгу!</p>
+  <span class="time-right-for-product">11:00</span>
+</div>
+
+<div class="container-for-product darker-for-product">
+  <img src="https://i.pinimg.com/564x/66/a7/00/66a7004c05612f9e2679605968d3f835.jpg" alt="Avatar">
+  <p>Салам. Книга мультяшная, так что ставлю 2 👎🏿</p>
+  <span class="time-right-for-product">11:01</span>
+</div>
+
+<div class="container-for-product">
+  <img src="https://hypeava.ru/uploads/posts/2020-06/1592687772_2.jpg" alt="Avatar">
+  <p>Хорошего дня! Интересная и неоригинальная книга!</p>
+  <span class="time-right-for-product">11:02</span>
+</div>
+
+<div class="container-for-product darker-for-product">
+  <img src="https://oir.mobi/uploads/posts/2021-03/1616374854_25-p-anime-art-devushka-na-avu-32.jpg" alt="Avatar">
+  <p>Хай! Мне и мою братику понравилась так, что лайк!</p>
+  <span class="time-right-for-product">11:05</span>
+</div>
+</div>
+<div class="col-lg-2 col-sm-1">
+
+</div>
+</div>
+  </section>
+
+
+
+
+
+
+
+  <!-- С ним некрасиво выглядит тень -->
+  <div style="width:100%; height:50px; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:0 0 50px 50px; width:100%; height:100%;"></div>
+  </div>
+
+
+
+  <!-- BEIBARYS -->
+  <!-- footer -->
+  <footer>
+    <section id="main-footer">
+      <div class="container">
+
+        <div class="row" style="padding-top:30px;">
+          <div class="col-lg-4">
+            <button class="accordion">Покупателям</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Как сделать заказ</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Способы оплаты</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Доставка</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат товара</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат денежных средств</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила продажи</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила пользования торговой площадкой</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Вопросы и ответы</a></li>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="accordion">Партнерам</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Продавцам</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Откройте пункт выдачи</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Франшизный пункт выдачи</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="accordion">Компания</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+                <li><a rel="nofollow" href="../pages/about.html" style="color: lightgrey;">О нас</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Реквизиты</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Пресс-центр</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Контакты</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Bug Bounty</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-1 col-sm-1">
+
+          </div>
+        </div>
+        <br><br>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 0.05rem solid white; border-radius: 9px; padding: 0px; margin-right: 50px;"><img src="https://www.yuuju.hn/assets/img/appGallery-es.png" style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 1px solid white; border-radius: 6px; padding: 0px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 2px solid lightgrey; border-radius: 9px; padding: 0px; margin-left: 50px;"><img src="https://getstayactive.com/wp-content/uploads/2017/10/App-Store-Logo.png"
+                style="width:150px; height:45px;"></a>
+          </li>
+        </ul>
+        <br>
+
+        <div class="under-fav">
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-vk fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-youtube fa-2x icon-youtube"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-instagram fa-2x icon-instagram"></i></a>
+          </li>
+
+        </ul>
+
+        <div class="nav justify-content-center">
+
+          <span class="footer_defination">2021-2022 © Amazing</span>
+          <span class="footer_defination" style="padding-left: 5px;"> - современный интернет-магазин для тех кто ищет аксессуары для животных, книги, </span>
+          <span class="footer_defination">электроники и многие другие интересные товары. Все права защищены. Доставка по всему Казахстану!</span>
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-visa fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-mastercard fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/VzuwBDTtj6qCoJWIxikZAJ8Y5I1YGdlxzWhUo3-Xe51J7p_vD-RYtmpb0ffmh64iWeg" alt="kaspi" style="width:30px;">
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/AcTuzpsadAJTixBYyIpMvr8IbSX_hwZkX1el4WldG9L6hncSa2sBhehqnJBwITZHF2Bi" alt="halyk" style="width:30px;">
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </footer>
+
+
+  <!-- DAUREN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../dist/js/lightbox-plus-jquery.js" charset="utf-8"></script> <!-- скрипт для приближения -->
+  <script src="../scripts/index.js" charset="utf-8"></script>
+  <!-- BEIBARYS -->
+  <script src="../scripts/biba.js" charset="utf-8"></script>
+
+  <!-- ALAR -->
+  <script src="../assets/scripts/click.js"></script>
+  <script>
+    setClickListener("../assets/sounds/click.mp3")
+  </script>
+
+  <script src="../assets/scripts/adapcarousel.js"></script>
+  <script src="../assets/scripts/caro.js"></script>
+  <script src="../assets/scripts/grido.js"></script>
+  <script>
+    const contentHolder = new ContentHolder();
+    contentHolder.addContent("../assets/img/items/books/1.png","Гордость и пред...", "11.50$");
+    contentHolder.addContent("../assets/img/items/books/4.png", "Преступление и...", "9.90$");
+    contentHolder.addContent("../assets/img/items/booksPar/3.png", "Игралочка матем", "3.99$");
+    contentHolder.addContent("../assets/img/items/books/2.png",  "Мастер и Марг...", "2.99$");
+    contentHolder.addContent("../assets/img/items/booksPar/1.png", "Скорочтение", "1.50$");
+
+    const carousel = new AdaptiveCarousel(contentHolder);
+
+    const cont = document.getElementById("karlsson1");
+    cont.appendChild(carousel.element);
+  </script>
+</body>
+
+</html>

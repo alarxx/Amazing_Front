@@ -115,7 +115,7 @@ class MyCarousel {
         this.#carousel.style.display = "inline-block";
         this.#containerElement.style.textAlign = "center";
 
-        
+
 
         // BUTTONS
         // const buttons = document.createElement("div");

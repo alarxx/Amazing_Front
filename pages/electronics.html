@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <!-- BEIBARYS -->
   <link rel="stylesheet" href="../css/biba_styles.css">
-  
+
   <!-- Bootstrap scripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -26,9 +26,17 @@
   <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
   <!-- Favicon -->
   <link rel="icon" href="../pic/favicon.ico">
-  
+
   <!-- ALAR -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .panel {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s ease-out;
+    }
+  </style>
 </head>
 
 <body>
@@ -48,21 +56,21 @@
 
           <ul class="nav ml-auto" style="margin-left:10px; text-align:center; margin-top:10px; margin-botton:0px;">
             <li class="nav-item">
-              <a class="nav-link details-nav" href="#"><i class="fas fa-map-marker-alt fa-2x"></i>
+              <a class="nav-link details-nav" href="../pages/address.html"><i class="fas fa-map-marker-alt fa-2x"></i>
                 <br>
-                <p>Address</p>
+                <p>Адрес</p>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link details-nav" href="#"><i class="fas fa-shopping-basket fa-2x"></i>
                 <br>
-                <p>Basket</p>
+                <p>Корзина</p>
               </a>
             </li>
             <li class="nav-item block-for-signin">
               <a class="nav-link details-nav cd-signup" href="#"><i class="fas fa-user-alt fa-2x"></i>
                 <br>
-                <p>Log In</p>
+                <p>Вход</p>
               </a>
             </li>
 
@@ -175,19 +183,19 @@
   <!-- DAUREN -->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Search.." title="Type in a category">
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
     <ul id="myMenu">
-    <li><a href="../pages/books.html">Books</a></li>
-    <li><a href="../pages/electronics.html">Electronics</a></li>
-    <li><a href="../pages/pet.html">Pet itemes</a></li>
-    <li><a href="../pages/shoes.html">Shoes</a></li>
-    <li><a href="../pages/clothes.html">Clothes</a></li>
-    <li><a href="../pages/toys.html">Toys</a></li>
-    <li><a href="../pages/sport.html">Sport</a></li>
-    <li><a href="../pages/hom.html">Hom</a></li>
-    <li><a href="../pages/furniture.html">Furniture</a></li>
-    <li><a href="../pages/health.html">Health</a></li>
-    <li><a href="../pages/beauty.html">Beauty</a></li>
+    <li><a href="../pages/books.html">Книги</a></li>
+    <li><a href="../pages/electronics.html">Электроника</a></li>
+    <li><a href="../pages/pet.html">Зоотовары</a></li>
+    <li><a href="../pages/shoes.html">Обувь</a></li>
+    <li><a href="../pages/clothes.html">Одежда</a></li>
+    <li><a href="../pages/toys.html">Игрушки</a></li>
+    <li><a href="../pages/sport.html">Спорт</a></li>
+    <li><a href="../pages/hom.html">Дом</a></li>
+    <li><a href="../pages/furniture.html">Мебель</a></li>
+    <li><a href="../pages/health.html">Здоровье</a></li>
+    <li><a href="../pages/beauty.html">Красота</a></li>
     </ul>
     <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
     <label class="btn btn-outline-light active">
@@ -198,7 +206,7 @@
     </label>
     </div>
   </div>
-  
+
 
   <!-- body -->
   <!-- ALAR -->
@@ -206,9 +214,9 @@
     <section id="main_body">
 
     <!-- CAROUSEL -->
-    <div class="container-fluid myCarousel">
+    <div class="container-fluid myCarousel" style="padding:1rem 2rem;">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        
+
         <ol class="carousel-indicators" id="mycaroInd">
         </ol>
         <div class="carousel-inner" id="mycaro">
@@ -224,13 +232,13 @@
         </button>
       </div>
     </div>
-    
+
 
 
     <!-- BOXES -->
     <div class="container" style="margin-top: 5rem;">
       <div class="row" id="presents">
-        
+
       </div>
     </div>
     </section>
@@ -343,7 +351,7 @@
         <div class="nav justify-content-center">
 
           <span class="footer_defination">2021-2022 © Amazing</span>
-          <span class="footer_defination" style="padding-left: 5px;"> - современный интернет-магазин для тех кто ищит аксессуары для животных, книги, </span>
+          <span class="footer_defination" style="padding-left: 5px;"> - современный интернет-магазин для тех кто ищет аксессуары для животных, книги, </span>
           <span class="footer_defination">электроники и многие другие интересные товары. Все права защищены. Доставка по всему Казахстану!</span>
 
         </div>
@@ -404,7 +412,7 @@
       const contentHolder2 = new ContentHolder();
       contentHolder2.addContent("../assets/img/items/interesting/1.png", "Электрическая зуб...", "11.50$");
       contentHolder2.addContent("../assets/img/items/interesting/2.png",  "Колонка JBL", "29.99$");
-      contentHolder2.addContent("../assets/img/items/interesting/3.png", "Кофемашина EP4", "63.99$");
+      contentHolder2.addContent("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000", "MacBook Pro M1", "1,499$", "../pages/productForBeiba.html");
       contentHolder2.addContent("../assets/img/items/interesting/4.png", "Видеокарта Nvidia", "1200.90$");
       contentHolder2.addContent("../assets/img/items/interesting/5.png", "Медиаплеер Xiomi", "35.90$");
 

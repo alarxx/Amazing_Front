@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sarsenov Dauren, Akilbekov Alar, Baygozha Beybarys">
+  <meta name="description" content="modern internet-shop for every person">
+  <meta name="keywords" content="internet-shop">
+  <title>Amazing</title>
+  <!-- Font Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../dist/css/lightbox.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/biba_styles.css">
+  <!-- Bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/ff6d25a6f4.js" crossorigin="anonymous"></script>
+  <!-- Favicon -->
+  <link rel="icon" href="../pic/favicon.ico">
+  <!-- ALAR -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .panel {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.5s ease-out;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- DAUREN -->
+  <!-- Main navbar -->
+  <header>
+    <section class="main-bar">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="padding:0">
+
+          <div style="margin: 2rem;">
+            <button type="button" class="btn burger-dark" onclick="openNav()"><i class="fas fa-bars fa-2x"></i></button>
+          </div>
+
+          <a class="navbar-brand ml-auto" href="../index.html" style="font-size: 200%; font-weight: bold;"><i class="fa fa-shopping-bag" aria-hidden="true"></i> &nbsp;Amazing</a>
+
+
+
+          <ul class="nav ml-auto" style="margin-left:10px; text-align:center; margin-top:10px; margin-botton:0px;">
+            <li class="nav-item">
+              <a class="nav-link details-nav" href="../pages/address.html"><i class="fas fa-map-marker-alt fa-2x"></i>
+                <br>
+                <p>Адрес</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link details-nav" href="#"><i class="fas fa-shopping-basket fa-2x"></i>
+                <br>
+                <p>Корзина</p>
+              </a>
+            </li>
+            <li class="nav-item block-for-signin">
+              <a class="nav-link details-nav cd-signup" href="#"><i class="fas fa-user-alt fa-2x"></i>
+                <br>
+                <p>Вход</p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+
+    </section>
+  </header>
+
+  <!-- DAUREN -->
+  <!-- ROUND-BODY -->
+  <div style="width:100%; height:1rem ; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:50px 50px 0 0; width:100%; height:100%;"></div>
+  </div>
+
+  <!-- DAUREN -->
+  <div class="cd-user-modal">
+    <!-- все формы на фоне затемнения-->
+    <div class="cd-user-modal-container">
+      <!-- основной контейнер -->
+      <ul class="cd-switcher">
+        <li><a href="#0">Вход</a></li>
+        <li><a href="#0">Регистрация</a></li>
+      </ul>
+
+      <div id="cd-login">
+        <!-- форма входа -->
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="signin-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-password" for="signin-password">Пароль</label>
+            <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="Пароль">
+            <a href="#0" class="hide-password">Скрыть</a>
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <input type="checkbox" id="remember-me" checked>
+            <label for="remember-me">Запомнить меня</label>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width" type="submit" value="Войти">
+          </p>
+        </form>
+
+        <p class="cd-form-bottom-message"><a href="#0">Забыли свой пароль?</a></p>
+        <!-- <a href="#0" class="cd-close-form">Close</a> -->
+      </div> <!-- cd-login -->
+
+      <div id="cd-signup">
+        <!-- форма регистрации -->
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-username" for="signup-username">Имя пользователя</label>
+            <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Имя пользователя">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="signup-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <label class="image-replace cd-password" for="signup-password">Пароль</label>
+            <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="Пароль">
+            <a href="#0" class="hide-password">Скрыть</a>
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <input type="checkbox" id="accept-terms">
+            <label for="accept-terms">Я согласен с <a href="#0">Условиями</a></label>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width has-padding" type="submit" value="Создать аккаунт">
+          </p>
+        </form>
+
+        <!-- <a href="#0" class="cd-close-form">Close</a> -->
+      </div> <!-- cd-signup -->
+
+      <div id="cd-reset-password">
+        <!-- форма восстановления пароля -->
+        <p class="cd-form-message">Забыли пароль? Пожалуйста, введите адрес своей электронной почты. Вы получите ссылку, чтобы создать новый пароль.</p>
+
+        <form class="cd-form">
+          <p class="fieldset">
+            <label class="image-replace cd-email" for="reset-email">E-mail</label>
+            <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+            <span class="cd-error-message">Здесь сообщение об ошибке!</span>
+          </p>
+
+          <p class="fieldset">
+            <input class="full-width has-padding" type="submit" value="Восстановить пароль">
+          </p>
+        </form>
+        <p class="cd-form-bottom-message"><a href="#0">Вернуться к входу</a></p>
+      </div> <!-- cd-reset-password -->
+      <a href="#0" class="cd-close-form">Закрыть</a>
+    </div> <!-- cd-user-modal-container -->
+  </div> <!-- cd-user-modal -->
+
+
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <input type="text" id="mySearch" onkeyup="myFunction1()" placeholder="Поиск.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="../pages/books.html">Книги</a></li>
+      <li><a href="../pages/electronics.html">Электроника</a></li>
+      <li><a href="../pages/pet.html">Зоотовары</a></li>
+      <li><a href="../pages/shoes.html">Обувь</a></li>
+      <li><a href="../pages/clothes.html">Одежда</a></li>
+      <li><a href="../pages/toys.html">Игрушки</a></li>
+      <li><a href="../pages/sport.html">Спорт</a></li>
+      <li><a href="../pages/hom.html">Дом</a></li>
+      <li><a href="../pages/furniture.html">Мебель</a></li>
+      <li><a href="../pages/health.html">Здоровье</a></li>
+      <li><a href="../pages/beauty.html">Красота</a></li>
+    </ul>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons" style="padding: 20px 8px 20px 32px; align-self: flex-end;">
+      <label class="btn btn-outline-light active">
+        <input type="radio" name="options" id="option1" checked><i class="fas fa-sun" style="color:orange;"></i>
+      </label>
+      <label class="btn btn-outline-dark">
+        <input type="radio" name="options" id="option2"><i class="fas fa-moon"></i>
+      </label>
+    </div>
+  </div>
+
+
+  <section id="main-part">
+    <!-- <div class="container-fluid"> -->
+    <div class="row">
+      <div class="col-lg-5 col-sm-12 col-md-7">
+        <div class="image-part-1">
+
+          <div class="container-for-items">
+    <a href="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000" data-lightbox="daur"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1633027804000" style="height:370px; border-radius: 30px;"></a>
+    <a href="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948875000" data-lightbox="daur" style="display:none;"><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=80&.v=1632948875000"></a>
+    <a href="https://images.macrumors.com/t/mehoRyyhyrZL97IWfrptkwkYtzc=/2000x/article-new/2020/11/macbook-pro-13-inch-roundup-header.jpg" data-lightbox="daur" style="display:none;"><img src="https://images.macrumors.com/t/mehoRyyhyrZL97IWfrptkwkYtzc=/2000x/article-new/2020/11/macbook-pro-13-inch-roundup-header.jpg"></a>
+    <a href="https://techcrunch.com/wp-content/uploads/2020/11/Apple-2020-11-10-at-1.40.41-PM.jpg" data-lightbox="daur" style="display:none;"><img src="https://techcrunch.com/wp-content/uploads/2020/11/Apple-2020-11-10-at-1.40.41-PM.jpg"></a>
+    <a href="https://images.macrumors.com/article-new/2020/11/macbook-pro-m1-camera.jpg" data-lightbox="daur" style="display:none;"><img src="https://images.macrumors.com/article-new/2020/11/macbook-pro-m1-camera.jpg"></a>
+  </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-lg-7 col-sm-12 col-md-5">
+        <div class="desing-name-pet-item-1 margin-for-title" style="padding-left:5rem;">
+          <h2>Apple / Ноутбук MacBook Pro M1/8Gb/SSD512Gb/13.3"/Grey</h2>
+          <h2>WQXGA/Apple M1 8-core (2020) (MYD92RU/MYDC2RU)</h2>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12 col-sm-6">
+          <button type="button" class="btn btn-outline-warning">Price: $1,499</button><br><br>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+          <i class="fas fa-star icon-star fa-2x"></i>
+        </div>
+        <div class="col-lg-12 col-sm-6">
+          <img src="https://images.wbstatic.net/brands/small/new/16049.jpg" alt="kazpost" width="200px;" style="padding-top:2rem;">
+        </div>
+      </div>
+    </div>
+      </div>
+
+
+      <div class="text-description-for-pet-1">
+        <hr>
+        <h1>Описание</h1>
+        <p>С появлением чипа M1 MacBook Pro 13 дюймов становится невероятно производительным и быстрым. Мощность центрального процессора выросла до 2,8 раза. Скорость обработки графики - до 5 раз. Благодаря нашей передовой системе Neural Engine скорость машинного обучения возросла до 11 раз. При этом MacBook Pro работает без подзарядки дольше, чем любой другой Mac. Наш самый популярный ноутбук класса Pro выходит на совершенно новый уровень.</p>
+    </div>
+    </div>
+    <div id="karlsson1" style="margin: 4rem 0rem 0rem 0rem;">
+      <h1 style="text-align: center; margin-bottom: 2rem;">Рекомендации</h1>
+    </div>
+
+    <div class="space-for-rating">
+    <span class="heading-for-rating">User Rating</span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <span class="fa fa-star checked-for-rating" style="font-size: 25px;"></span>
+    <p>4.5 average based on 268 reviews.</p>
+    <hr style="border:3px solid #f1f1f1">
+
+    <div class="row-for-rating">
+      <div class="side-for-rating">
+        <div>5 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-5-for-rating" style="width:69%"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>185</div>
+      </div>
+      <div class="side-for-rating">
+        <div>4 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-4-for-rating" style="width:23%"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>62</div>
+      </div>
+      <div class="side-for-rating">
+        <div>3 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-3-for-rating" style="width:3%"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>6</div>
+      </div>
+      <div class="side-for-rating">
+        <div>2 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-2-for-rating" style="width:4%"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>10</div>
+      </div>
+      <div class="side-for-rating">
+        <div>1 star</div>
+      </div>
+      <div class="middle-for-rating">
+        <div class="bar-container-for-rating">
+          <div class="bar-1-for-rating" style="width:2%"></div>
+        </div>
+      </div>
+      <div class="side-for-rating right-for-rating">
+        <div>5</div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="text-description-for-pet-1">
+        <h1>Комментарии</h1>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 col-sm-1">
+
+  </div>
+<div class="col-lg-8 col-sm-10" style="margin-bottom:2rem;">
+    <div class="container-for-product">
+  <img src="http://sun9-15.userapi.com/sun9-28/s/v1/ig2/NcZ1p9zRQ-oGqfx_gzXy_kdLg7922EibL9Wn4RbtMewzcS_84Iak_pqhveFNXb592EGZO9NFJXYNhZlbz5hyn0Gm.jpg?size=200x200&quality=96&crop=60,2,581,581&ava=1" alt="Avatar">
+  <p>Всем хаюшки! Сама недавно купила этот компьютер и честно очень клевый!</p>
+  <span class="time-right-for-product">12:03</span>
+</div>
+
+<div class="container-for-product darker-for-product">
+  <img src="https://sun9-63.userapi.com/sun9-7/impg/vgjRc5s4QWW9nGhboCIwDyhCspp2tk99aPuG-w/lujojKhUQUM.jpg?size=604x592&quality=96&sign=52ad2fbe80ab136cea3af1b1134d7e49&type=album" alt="Avatar">
+  <p>Салам алексус! Комп просто заряжен на работу, но не на игры.</p>
+  <div id="div1" class="fa"></div>
+
+<script>
+function smile() {
+var a;
+a = document.getElementById("div1");
+a.innerHTML = "&#xf118;";
+setTimeout(function () {
+a.innerHTML = "&#xf11a;";
+}, 1000);
+setTimeout(function () {
+a.innerHTML = "&#xf119;";
+}, 2000);
+setTimeout(function () {
+a.innerHTML = "&#xf11a;";
+}, 3000);
+}
+smile();
+setInterval(smile, 4000);
+</script>
+  <span class="time-right-for-product">16:08</span>
+</div>
+
+<div class="container-for-product">
+  <img src="https://thypix.com/wp-content/uploads/2021/10/anime-avatar-profile-picture-thypix-m.jpg" alt="Avatar">
+  <p>Хорошего вечера! Хороший комп, но я люблю играть игры, так что для меня не подошел 😰</p>
+  <span class="time-right-for-product">20:10</span>
+</div>
+
+<div class="container-for-product darker-for-product">
+  <img src="https://klike.net/uploads/posts/2021-12/1638345205_21.jpg" alt="Avatar">
+  <p>Охае! Комп не для игр, но для работы самое то! 😍</p>
+  <span class="time-right-for-product">21:32</span>
+</div>
+</div>
+<div class="col-lg-2 col-sm-1">
+
+</div>
+</div>
+
+  </section>
+
+
+
+  <!-- С ним некрасиво выглядит тень -->
+  <div style="width:100%; height:50px; background-color:#142850; z-index:-1;">
+    <div style="background-color:white; border-radius:0 0 50px 50px; width:100%; height:100%;"></div>
+  </div>
+
+
+
+  <!-- BEIBARYS -->
+  <!-- footer -->
+  <footer>
+    <section id="main-footer">
+      <div class="container">
+
+        <div class="row" style="padding-top:30px;">
+          <div class="col-lg-4">
+            <button class="accordion">Покупателям</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Как сделать заказ</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Способы оплаты</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Доставка</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат товара</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Возврат денежных средств</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила продажи</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Правила пользования торговой площадкой</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Вопросы и ответы</a></li>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="accordion">Партнерам</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Продавцам</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Откройте пункт выдачи</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Франшизный пункт выдачи</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <button class="accordion">Компания</button>
+            <div class="panel" style="background-color: #142850;">
+              <ul class="footer-block">
+                <li><a rel="nofollow" href="../pages/about.html" style="color: lightgrey;">О нас</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Реквизиты</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Пресс-центр</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Контакты</a></li>
+                <li><a rel="nofollow" href="#" style="color: lightgrey;">Bug Bounty</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-1 col-sm-1">
+
+          </div>
+        </div>
+        <br><br>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 0.05rem solid white; border-radius: 9px; padding: 0px; margin-right: 50px;"><img src="https://www.yuuju.hn/assets/img/appGallery-es.png" style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 1px solid white; border-radius: 6px; padding: 0px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                style="width:150px;"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="border: 2px solid lightgrey; border-radius: 9px; padding: 0px; margin-left: 50px;"><img src="https://getstayactive.com/wp-content/uploads/2017/10/App-Store-Logo.png"
+                style="width:150px; height:45px;"></a>
+          </li>
+        </ul>
+        <br>
+
+        <div class="under-fav">
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-vk fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-youtube fa-2x icon-youtube"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fab fa-instagram fa-2x icon-instagram"></i></a>
+          </li>
+
+        </ul>
+
+        <div class="nav justify-content-center">
+
+          <span class="footer_defination">2021-2022 © Amazing</span>
+          <span class="footer_defination" style="padding-left: 5px;"> - современный интернет-магазин для тех кто ищет аксессуары для животных, книги, </span>
+          <span class="footer_defination">электроники и многие другие интересные товары. Все права защищены. Доставка по всему Казахстану!</span>
+
+        </div>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-visa fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem" style="color: white">
+            <i class="fab fa-cc-mastercard fa-2x"></i>
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/VzuwBDTtj6qCoJWIxikZAJ8Y5I1YGdlxzWhUo3-Xe51J7p_vD-RYtmpb0ffmh64iWeg" alt="kaspi" style="width:30px;">
+          </li>
+          <li class="nav-item footer_pay_sistem">
+            <img class="img-bord-around" src="https://play-lh.googleusercontent.com/AcTuzpsadAJTixBYyIpMvr8IbSX_hwZkX1el4WldG9L6hncSa2sBhehqnJBwITZHF2Bi" alt="halyk" style="width:30px;">
+          </li>
+        </ul>
+
+      </div>
+    </section>
+  </footer>
+
+
+  <!-- DAUREN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../dist/js/lightbox-plus-jquery.js" charset="utf-8"></script> <!-- скрипт для приближения -->
+  <script src="../scripts/index.js" charset="utf-8"></script>
+  <!-- BEIBARYS -->
+  <script src="../scripts/biba.js" charset="utf-8"></script>
+
+  <!-- ALAR -->
+  <script src="../assets/scripts/click.js"></script>
+  <script>
+    setClickListener("../assets/sounds/click.mp3")
+  </script>
+
+  <script src="../assets/scripts/adapcarousel.js"></script>
+  <script src="../assets/scripts/caro.js"></script>
+  <script src="../assets/scripts/grido.js"></script>
+  <script>
+    const contentHolder = new ContentHolder();
+    contentHolder.addContent("../assets/img/items/interesting/5.png", "Медиаплеер Xiomi", "35.90$");
+    contentHolder.addContent("../assets/img/items/interesting/2.png",  "Колонка JBL", "29.99$");
+    contentHolder.addContent("../assets/img/items/electro/3.png", "Nintendo консоль", "3.99$");
+    contentHolder.addContent("../assets/img/items/electro/4.png", "Наушники безпр...", "9.90$");
+    contentHolder.addContent("../assets/img/items/electro/5.png", "Телевизор", "5.90$");
+
+    const carousel = new AdaptiveCarousel(contentHolder);
+
+    const cont = document.getElementById("karlsson1");
+    cont.appendChild(carousel.element);
+  </script>
+</body>
+
+</html>
